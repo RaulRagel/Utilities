@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(30, 32, 36);
+    height: 70vh;
+    overflow: hidden;
+
+    display: grid;
+    place-content: center;
+}
+
+.buff-container{
+
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: rotate ease-in-out 3s infinite;
+}
+
+.buff-container .buff{
+
+    position: absolute;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+
+    animation: anim1 ease-in-out 3s infinite;
+}
+
+@keyframes anim1 {
+    
+    50%{
+        transform: rotate(calc(360deg / 10 * var(--i))) translateX(70px);
+        width: 10px;
+        height: 10px;
+
+    }
+    
+    100%{
+        transform: rotate(0deg) translateX(0px);
+    }
+
+}
+
+@keyframes rotate {
+
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    60%{
+        transform: rotate(360deg);
+    }
+}
+
+/* BUFFERING 2*/
+
+.buff2-container{
+
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buff2-container .buff{
+
+    position: absolute;
+    background-color: white;
+
+    width: calc(10px + 5px * var(--j));
+    height: calc(10px + 5px * var(--j));
+    border-radius: 50%;
+
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+
+
+    animation: anim2 ease-in-out 3s infinite;
+    animation-delay: calc(0.1s * var(--j));
+}
+
+@keyframes anim2 {
+    
+    10%{
+        transform: translateX(70px);
+    }
+
+    15%{
+        transform: rotate(720deg) translateX(70px);
+    }
+}
