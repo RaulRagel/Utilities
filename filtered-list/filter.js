@@ -36,14 +36,9 @@ function updateList(filteredItems){
 
     filteredItems.forEach(function(item){
 
-        listElement.appendChild(createListElement(item));
+        var li = document.createElement("li");
+        li.innerText = item;
+
+        listElement.appendChild(li);
     })
-}
-
-function createListElement(item){
-
-    var li = document.createElement("li");
-    li.innerText = item;
-
-    return li;
 }

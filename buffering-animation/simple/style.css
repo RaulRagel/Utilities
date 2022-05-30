@@ -1,0 +1,56 @@
+:root{
+    --bg: rgb(30, 32, 36);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    height: 70vh;
+    overflow: hidden;
+
+    display: grid;
+    place-content: center;
+}
+
+.buff-container{
+
+    position: relative;
+
+    width: 200px; height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buffering{
+    
+    width: 90%; height: 90%;
+    background-color: transparent;
+    
+    border-bottom: 10px solid white;
+    border-top: 10px solid white;
+    
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-radius: 50%;
+    animation: rotate ease 3s infinite;
+}
+
+@keyframes rotate{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}

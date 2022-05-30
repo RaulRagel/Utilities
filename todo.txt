@@ -1,0 +1,9 @@
+
+- meter los toast
+
+- meter los dialog
+
+- meter nav bars
+
+- meter menuses
+animacion como la de cerrar y abrir un menu
